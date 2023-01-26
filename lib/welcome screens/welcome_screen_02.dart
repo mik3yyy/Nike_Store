@@ -99,7 +99,7 @@ class _WelcomeScreen2State extends State<WelcomeScreen2> {
                 ),
                 Positioned(
                   left: 160,
-                  bottom: 100,
+                  bottom: 50,
                   child: Image.asset('assets/images/welcome_screen/prop9.png'),
                 ),
               ],

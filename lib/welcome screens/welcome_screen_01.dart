@@ -43,7 +43,7 @@ class _WelcomeScreen1State extends State<WelcomeScreen1> {
           Image.asset('assets/images/welcome_screen/prop6.png'),
           Container(
             width: MediaQuery.of(context).size.width,
-            height: 600,
+            height: 550,
             child: Stack(
               children: [
                 Positioned(

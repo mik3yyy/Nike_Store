@@ -2,9 +2,8 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:nike_store/provider/main_provider.dart';
 import 'package:nike_store/welcome%20screens/welcome_screen_01.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-// import 'package:nike_store/welcome%20screens/splash%20screen.dart';
+
 
 void main() {
   runApp(

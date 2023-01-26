@@ -98,7 +98,7 @@ class _WelcomeScreen3State extends State<WelcomeScreen3> {
                 ),
                 Positioned(
                   left: 160,
-                  bottom: 100,
+                  bottom: 50,
                   child: Image.asset('assets/images/welcome_screen/prop12.png'),
                 ),
               ],

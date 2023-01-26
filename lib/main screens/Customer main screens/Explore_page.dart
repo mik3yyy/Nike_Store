@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
@@ -83,7 +82,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(
-                    'assets/images/welcome_screen/prop8.png',
+                    'assets/images/flutter_logo.png',
                   ),
                 ),
                 ListTile(

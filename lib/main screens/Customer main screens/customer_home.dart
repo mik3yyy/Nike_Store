@@ -5,6 +5,7 @@ import 'package:flutter_badged/badge_position.dart';
 import 'package:flutter_badged/badge_positioned.dart';
 import 'package:flutter_badged/flutter_badge.dart';
 import 'package:nike_store/main%20screens/Customer%20main%20screens/Explore_page.dart';
+import 'package:nike_store/main%20screens/Customer%20main%20screens/favourite_screen.dart';
 import '../../constants.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 
@@ -20,7 +21,7 @@ class _CustomerHomeState extends State<CustomerHome> {
   int _currentIndex=0;
   List _mainscreens = [
       ExploreScreen(),
-      Center(child: Text('mike'),),
+    FavouriteScreen(),
       Center(child: Text('mike'),),
       Center(child: Text('mike'),),
 

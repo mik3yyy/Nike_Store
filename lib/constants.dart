@@ -15,23 +15,31 @@ class Styles{
 Map <String, String> shoe1={
  'id':'1',
  'name': 'Nike Jordan',
- 'price': '\$302.00'
+ 'price': '\$302.00',
+ 'description': 'The Max Air 270 unit delivers unrivaled, all-day comfort. The sleek, running-inspired design roots you to everything Nike........',
+
 };
 
 Map <String, String> shoe2={
  'id':'2',
  'name': 'Nike Air Max',
- 'price': '\$302.00'
+ 'price': '\$302.00',
+ 'description': 'The Max Air 270 unit delivers unrivaled, all-day comfort. The sleek, running-inspired design roots you to everything Nike........',
+
 };
 Map <String, String> shoe3={
  'id':'3',
  'name': 'Nike Club Max',
- 'price': '\$302.00'
+ 'price': '\$302.00',
+ 'description': 'The Max Air 270 unit delivers unrivaled, all-day comfort. The sleek, running-inspired design roots you to everything Nike........',
+
 };
 Map <String, String> shoe4={
  'id':'4',
  'name': 'Nike Air Max 270',
- 'price': '\$302.00'
+ 'price': '\$302.00',
+ 'description': 'The Max Air 270 unit delivers unrivaled, all-day comfort. The sleek, running-inspired design roots you to everything Nike........',
+
 };
 class Product{
 

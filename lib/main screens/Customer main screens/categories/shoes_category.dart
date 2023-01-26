@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:nike_store/main%20screens/Customer%20main%20screens/display_screen.dart';
+import 'package:provider/provider.dart';
 
 import '../../../constants.dart';
+import '../../../provider/main_provider.dart';
 
 class Shoes extends StatefulWidget {
   const Shoes({Key? key}) : super(key: key);
@@ -12,6 +15,7 @@ class Shoes extends StatefulWidget {
 class _ShoesState extends State<Shoes> {
   @override
   Widget build(BuildContext context) {
+
     return Column(
       children: [
         Padding(
@@ -55,9 +59,26 @@ class _ShoesState extends State<Shoes> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 6.0,top: 6),
-                      child: Icon(Icons.favorite_border,),
+                    InkWell(
+
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 6.0,top: 6),
+                        child: Provider.of<MainProvider>(context, listen: true).indexIsFavourite(index) == false ?Icon(Icons.favorite_border,):Icon(Icons.favorite,color: Colors.red,) ,
+                      ),
+                      onTap: (){
+
+                        setState(() {
+
+                          if(Provider.of<MainProvider>(context, listen: false).indexIsFavourite(index)){
+                            Provider.of<MainProvider>(context, listen: false).removeFromFavourite(index);
+
+                          }else {
+                            Provider.of<MainProvider>(context, listen: false).addToFavorite(index);
+
+                          }
+
+                        });
+                      },
                     ),
                     InkWell(
 
@@ -65,15 +86,17 @@ class _ShoesState extends State<Shoes> {
                         child: Container(
                           child: Image.asset('assets/images/shoes/shoe_${index+1}.png'),
                           width: MediaQuery.of(context).size.width,
-                          height: 70,
+                          height: 60,
                         ),
                       ),
                       onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> DisplayScreen(index: index,)));
+
 
                       },
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 6, bottom: 6),
+                      padding: EdgeInsets.only(left: 6, bottom: 3),
                       child: Text('BEST SELLER',
                         style: TextStyle(
                           color: Styles.blueColor,
@@ -81,7 +104,7 @@ class _ShoesState extends State<Shoes> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 6, bottom: 6),
+                      padding: EdgeInsets.only(left: 6, bottom: 3),
                       child: Text(Product.products[index]['name'],
                         style: TextStyle(
                           color: Styles.blackColor,
@@ -123,7 +146,7 @@ class _ShoesState extends State<Shoes> {
                         ],
                       ),
                       width: MediaQuery.of(context).size.width,
-                      height: 44,
+                      height: 40,
                     )
                   ],
                 ),

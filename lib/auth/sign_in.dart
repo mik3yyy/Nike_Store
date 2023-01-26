@@ -88,7 +88,9 @@ class _SignInState extends State<SignIn> {
                       }
 
                     },
+
                     decoration: InputDecoration(
+
                       hintText: 'xyz@gmail.com',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -129,9 +131,10 @@ class _SignInState extends State<SignIn> {
                       }
 
                     },
+
                     obscureText: visible,
                     decoration: InputDecoration(
-                      
+
                       hintText: '*********',
                       suffixIcon: IconButton(
                         icon:visible==false? Icon(Icons.visibility): Icon(Icons.visibility_off),
